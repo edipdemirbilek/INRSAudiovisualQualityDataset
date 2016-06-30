@@ -19,11 +19,11 @@ class CalculateCorrelation:
     def __init__(self, master=None):   
                 
         if sys.platform.startswith('win'):
-            self.subjectinputdir="C:/Users/edip.demirbilek/Dropbox/INRS/2016Winter/ACRScores/SubjectMerged/"
-            self.allinputdir="C:/Users/edip.demirbilek/Dropbox/INRS/2016Winter/ACRScores/MOS/"
+            self.subjectinputdir="<MergeDir>"
+            self.allinputdir="<ACRScoresDir>"
         elif sys.platform.startswith('darwin'):
-            self.subjectinputdir="/Users/edipdemirbilek/Dropbox/INRS/2016Winter/ACRScores/SubjectMerged/"
-            self.allinputdir="/Users/edipdemirbilek/Dropbox/INRS/2016Winter/ACRScores/MOS/"
+            self.subjectinputdir="<MergeDir>"
+            self.allinputdir="<ACRScoresDir>"
         
         self.subjectDF=pd.read_csv(self.subjectinputdir+self.subjectFileName,index_col=None, header=0)
         self.allDF=pd.read_csv(self.allinputdir+self.allFileName,index_col=None, header=0)

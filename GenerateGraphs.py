@@ -21,41 +21,21 @@ class GenerateGraphs:
     def __init__(self, master=None):   
                 
         if sys.platform.startswith('win'):
-            self.subjectinputdir="C:/Users/edip.demirbilek/Dropbox/INRS/2016Winter/ACRScores/SubjectNames/"
-            self.mosinputdir="C:/Users/edip.demirbilek/Dropbox/INRS/2016Winter/ACRScores/MOS/"
+            self.subjectinputdir="<SubjectInputDir>"
+            self.mosinputdir="<MOSInputDir>"
         elif sys.platform.startswith('darwin'):
-            self.subjectinputdir="/Users/edipdemirbilek/Dropbox/INRS/2016Winter/ACRScores/SubjectNames/"
-            self.mosinputdir="/Users/edipdemirbilek/Dropbox/INRS/2016Winter/ACRScores/MOS/"
+            self.subjectinputdir="<SubjectInputDir>"
+            self.mosinputdir="<MOSInputDir>"
         
         self.subjectsDF=pd.read_csv(self.subjectinputdir+self.subjectFileName,index_col=None, header=0)
         self.allDF=pd.read_csv(self.mosinputdir+self.mosAndSideFileName,index_col=None, header=0)
         
 
     def generate(self):
-        #print self.subjectsDF
-        #print self.allDF
-        
+
         score = self.subjectsDF[['Score','Id']]
         time = self.subjectsDF[['Time','Id']]
         correlation = self.subjectsDF[['Correlation','Id']]
-#        
-#        score.plot.bar(x='Id', y='Score', figsize=(8, 1.5), color='#624ea7', alpha=0.8, legend=None);
-#        #plt.legend(loc='lower right')
-#        plt.ylabel('Subjective Scores')
-#        #plt.xlabel('Subject Id')
-#        plt.show()
-#        
-#        time.plot.bar(x='Id', y='Time', figsize=(8, 1.5), color='k', alpha=0.8, legend=None);
-#        #plt.legend(loc='lower right')
-#        plt.ylabel('Time to Rate (ms)')
-#        #plt.xlabel('Subject Id')
-#        plt.show()
-#        
-#        correlation.plot.bar(x='Id', y='Correlation', figsize=(8, 1.5), color='maroon', alpha=0.8, legend=None);
-#        #plt.legend(loc='lower right')
-#        plt.ylabel('Correlation')
-#        plt.xlabel('Subject Id')
-#        plt.show()
         
         score.plot.box(y='Score', figsize=(1.5, 4), widths = 0.45);
         #plt.title("Accepted Subjective Scores")
@@ -117,10 +97,6 @@ class GenerateGraphs:
         plt.show()
         
         fig1, fig2, fig3 = self.subjectsDF.plot.bar(x='Id',subplots=True, figsize=(8, 6), legend='None', facecolor='k', edgecolor='k', width=0.25, alpha=0.8); 
-        #fig1, fig2, fig3 = self.subjectsDF.plot.bar(x='Id',subplots=True, figsize=(8, 6), legend='None', color=['#8dd3c7', '#ffffb3', '#bebada'], edgecolor='k'); 
-        #fig1.set_axis_bgcolor('None')  
-        #fig2.set_axis_bgcolor('None')
-        #fig3.set_axis_bgcolor('None')
         fig1.legend_.remove()
         fig2.legend_.remove()
         fig3.legend_.remove()

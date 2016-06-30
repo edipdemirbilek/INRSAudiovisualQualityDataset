@@ -4,7 +4,7 @@ the details are given in publication [1]
 
 File List:
 
-MOS Folder: This Folder contains MOS Scores calculated. refer to the Readme file in this Folder for details.
+MOS Folder: This Folder contains various MOS Score files. 
 
 OutputVideoFiles Folder: This Folder contains saved output video files, RTCP stats collected during streaming for each file, consolidated statistics and video file header parameters, and randomized file list used in https://github.com/edipdemirbilek/SubjectiveAssesmentVideoPlayer.
 

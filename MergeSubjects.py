@@ -23,13 +23,13 @@ class MergeSubjects:
     def __init__(self, master=None):   
                 
         if sys.platform.startswith('win'):
-            self.inputdir="C:/Users/edip.demirbilek/Dropbox/INRS/2016Winter/ACRScores/SubjectMerged/"
-            self.outputdir="C:/Users/edip.demirbilek/Dropbox/INRS/2016Winter/ACRScores/MOS/"
-            self.paramsdir="C:/Users/edip.demirbilek/Dropbox/INRS/2016Winter/OutputVideoFiles/Output/parameters/"
+            self.inputdir="<SubjectsMergeDirectory>"
+            self.outputdir="<MOSDirectory>"
+            self.paramsdir="<ParametersDirectory>"
         elif sys.platform.startswith('darwin'):
-            self.inputdir="/Users/edipdemirbilek/Dropbox/INRS/2016Winter/ACRScores/SubjectMerged/"
-            self.outputdir="/Users/edipdemirbilek/Dropbox/INRS/2016Winter/ACRScores/MOS/"
-            self.paramsdir="/Users/edipdemirbilek/Dropbox/INRS/2016Winter/OutputVideoFiles/Output/parameters/"
+            self.inputdir="<SubjectsMergeDirectory>"
+            self.outputdir="<MOSDirectory>"
+            self.paramsdir="<ParametersDirectory>"
             
         self.packetheaderparams = pd.read_csv(self.paramsdir+"PacketHeaderInfo.csv")
         self.packetheadersubsetparams = pd.read_csv(self.paramsdir+"PacketHeaderInfoSubset.csv")

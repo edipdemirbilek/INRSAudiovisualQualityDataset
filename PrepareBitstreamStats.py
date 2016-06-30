@@ -18,10 +18,11 @@ class PrepareBitstreamStats:
     def __init__(self, master=None):   
                 
         if sys.platform.startswith('win'):
-            self.inputdir="C:/Users/edip.demirbilek/Dropbox/INRS/2016Winter/OutputVideoFiles/Output/stats/"
-            self.outputdir="C:/Users/edip.demirbilek/Dropbox/INRS/2016Winter/OutputVideoFiles/Output/parameters/"
+            self.inputdir="<StatsDirectory>"
+            self.outputdir="<ParametersDirectory>"
         elif sys.platform.startswith('darwin'):
-            self.inputdir="/Users/edipdemirbilek/Dropbox/INRS/2015 Summer/VideoPlayer/MOS/"
+            self.inputdir="<StatsDirectory>"
+            self.outputdir="<ParametersDirectory>"
         
         shortFileName="BitStreamStats.csv"
         self.fd1 = open(self.outputdir+shortFileName,'w')

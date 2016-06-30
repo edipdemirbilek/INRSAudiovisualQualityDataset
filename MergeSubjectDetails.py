@@ -22,11 +22,11 @@ class MergeSubjectDetails:
                 
             
         if sys.platform.startswith('win'):
-            self.inputdir="C:/Users/edip.demirbilek/Dropbox/INRS/2016Winter/ACRScores/SubjectDetails/"
-            self.outputdir="C:/Users/edip.demirbilek/Dropbox/INRS/2016Winter/ACRScores/SubjectMerged/"
+            self.inputdir="<SubjectsDetailDirectory>"
+            self.outputdir="<SubjectsMergeDirectory>"
         elif sys.platform.startswith('darwin'):
-            self.inputdir="/Users/edipdemirbilek/Dropbox/INRS/2016Winter/ACRScores/SubjectDetails/"
-            self.outputdir="/Users/edipdemirbilek/Dropbox/INRS/2016Winter/ACRScores/SubjectMerged/"
+            self.inputdir="<SubjectsDetailDirectory>"
+            self.outputdir="<SubjectsMergeDirectory>"
 
         subjectFilesFirstHalf = [self.inputdir + "/"+self.subjectName+"Session1Part1.csv", 
                         self.inputdir + "/"+self.subjectName+"Session1Part2.csv",
@@ -73,7 +73,6 @@ class MergeSubjectDetails:
     def findACRScore(self, fileName):
         return self.subjectScoresSecondHalf.loc[self.subjectScoresSecondHalf['GeneralFileName'] == fileName].iloc[:,1]
      
-        
     def merge(self):
 
         header="GeneralFileName,MOS\n"

@@ -14,16 +14,16 @@ SubjectDetails Folder: It contains ACR scores collected from all observers. Thes
 
 SubjectMerged Folder: Consolidated ACR scores with summary info. The scores here are after rejection criteria is applied. Refer to [1] for details.
 
-CalculateCorrelation.py:
+CalculateCorrelation.py: Calculates the correlation of scrores of a given Subject with the overall MOS of all Subjects.
 
-GenerateGraphs.py:
+GenerateGraphs.py: Generates variosu graphs used in [1]
 
-MergeSubjectDetails.py:
+MergeSubjectDetails.py: Consolidates the ACR scores for a given Subject and also applies the rejection criteria specified in [1]
 
-MergeSubjects.py:
+MergeSubjects.py: Consolidate all Subject scores and compines with detailed parameters and generates varios MOS files. Comments in the file itself.
 
-PrepareBitstreamStats.py:
+PrepareBitstreamStats.py: From GStreamer RTCP stats file, it extracts only selected fields and stores in csv file.
 
-SubjectsSummary.csv:
+SubjectsSummary.csv: includes, total number of accepted scores, average time to rate and correlation to the rest for each subject.
 
 [1] Demirbilek, Edip, and Jean-Charles Grégoire. “The INRS Audiovisual Quality Dataset." 2016 ACM Multimedia Conference (accepted).

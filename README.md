@@ -1,10 +1,16 @@
 # The INRS Audiovisual Quality Dataset
 
-the details are given in publication [1]
+the details are given in publication [1,2,3]
 
 File List:
 
-MOS Folder: This Folder contains various MOS Score files. 
+MOS Folder: This Folder contains various MOS Score files. These files are:
+FileNameWithMOS.csv: contains the name of audiovisual files and MOS scores computed. 
+BaseDataset.csv: Contains 5 independen parameters (video frame rate, quantization parameter, noise reduction, packet loss rate for audio and video streams) and MOS scores computed [1, 2].
+WekaBaseDataset.arff: Same as BaseDataset in Weka format [1, 2].
+ParametricDataset.csv: contains BaseDataset and other dependent parameters extracted from transmitted videos. Models using this dataset would be called parametric No-Reference models [1, 2].
+WekaParametricDataset.arff: Same as ParametricDataset in Weka format [1, 2].
+BitstreamDataset.csv: contains BaseDataset and other dependent parameters extracted from transmitetd videos as well as reduced amount of information from original videos. Models using this dataset would be called bitstream reduced-Reference models [3]. 
 
 OutputVideoFiles Folder: This Folder contains saved output video files, RTCP stats collected during streaming for each file, consolidated statistics and video file header parameters, and randomized file list used in https://github.com/edipdemirbilek/SubjectiveAssesmentVideoPlayer.
 
@@ -26,4 +32,12 @@ PrepareBitstreamStats.py: From GStreamer RTCP stats file, it extracts only selec
 
 SubjectsSummary.csv: includes, total number of accepted scores, average time to rate and correlation to the rest for each subject.
 
-[1] Demirbilek, Edip, and Jean-Charles Grégoire. “The INRS Audiovisual Quality Dataset." 2016 ACM Multimedia Conference (accepted).
+Publications related to this dataset:
+
+For the Base and Parametric version of the dataset refer to:
+[1] Demirbilek, Edip, and Jean-Charles Grégoire. “The INRS Audiovisual Quality Dataset." 2016 ACM Multimedia Conference.
+
+[2] Edip Demirbilek and Jean-Charles Grégoire. Machine learning based parametric audiovisual quality prediction models for realtime communications. ACM TOMM (Revised).
+
+For the Bitstream version of the dataset refer to:
+[3] Edip Demirbilek and Jean-Charles Grégoire. Machine learning based bitstream audiovisual quality prediction models for realtime communications. IEEE International Conference on Multimedia and Expo, 2016 (Submitted).

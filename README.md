@@ -35,9 +35,17 @@ SubjectsSummary.csv: includes, total number of accepted scores, average time to 
 Publications related to this dataset:
 
 For the Base and Parametric version of the dataset refer to:
+
 [1] Demirbilek, Edip, and Jean-Charles Grégoire. “The INRS Audiovisual Quality Dataset." 2016 ACM Multimedia Conference.
 
 [2] Edip Demirbilek and Jean-Charles Grégoire. Machine learning based parametric audiovisual quality prediction models for realtime communications. ACM TOMM (Revised).
 
 For the Bitstream version of the dataset refer to:
+
 [3] Edip Demirbilek and Jean-Charles Grégoire. Machine learning based bitstream audiovisual quality prediction models for realtime communications. IEEE International Conference on Multimedia and Expo, 2016 (Submitted).
+
+For the implementation of the testbed used to create this dataset refer to:
+
+[4] https://github.com/edipdemirbilek/GStreamerMultimediaQualityTestbed
+
+[5] Edip Demirbilek and Jean-Charles Grégoire. Multimedia communication quality assessment testbeds. arXiv preprint arXiv:1609.06612, (2016).
